@@ -181,7 +181,6 @@
 				TargetAttributes = {
 					7494A83B1C225E6900A68BD2 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 448J82F5CA;
 					};
 				};
 			};
@@ -347,7 +346,7 @@
 				INFOPLIST_FILE = RecyleMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = thinkingcap.RecyleMe;
+				PRODUCT_BUNDLE_IDENTIFIER = sg.com.maybank.bib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -360,7 +359,7 @@
 				INFOPLIST_FILE = RecyleMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = thinkingcap.RecyleMe;
+				PRODUCT_BUNDLE_IDENTIFIER = sg.com.maybank.bib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

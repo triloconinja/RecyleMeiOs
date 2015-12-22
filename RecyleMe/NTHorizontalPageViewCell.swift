@@ -56,10 +56,15 @@ class NTHorizontalPageViewCell : UICollectionViewCell, UITableViewDelegate, UITa
     override func layoutSubviews() {
         super.layoutSubviews()
         tableView.reloadData()
+        var backgroundView = UIView(frame: CGRectZero)
+        
+        self.tableView.tableFooterView = backgroundView
+        
+        self.tableView.backgroundColor = UIColor.clearColor()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
