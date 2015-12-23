@@ -11,7 +11,9 @@ import UIKit
 class NTWaterfallViewCell :UICollectionViewCell, NTTansitionWaterfallGridViewProtocol{
     var imageName : String?
     var imageViewContent : UIImageView = UIImageView()
+    private var numberOfItemsPerSection = 9
     var azureImages: UIImage?
+   
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -31,4 +33,7 @@ class NTWaterfallViewCell :UICollectionViewCell, NTTansitionWaterfallGridViewPro
         snapShotView.frame = imageViewContent.frame
         return snapShotView
     }
+    
+
+
 }

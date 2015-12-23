@@ -56,11 +56,9 @@ class NTHorizontalPageViewCell : UICollectionViewCell, UITableViewDelegate, UITa
     override func layoutSubviews() {
         super.layoutSubviews()
         tableView.reloadData()
-        var backgroundView = UIView(frame: CGRectZero)
-        
-        self.tableView.tableFooterView = backgroundView
-        
-        self.tableView.backgroundColor = UIColor.clearColor()
+        let backgroundView = UIView(frame: CGRectZero)
+        tableView.tableFooterView = backgroundView
+        tableView.backgroundColor = UIColor.clearColor()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -102,4 +100,5 @@ class NTHorizontalPageViewCell : UICollectionViewCell, UITableViewDelegate, UITa
             pullAction?(offset: scrollView.contentOffset)
         }
     }
+    
 }

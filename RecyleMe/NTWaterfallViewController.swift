@@ -65,10 +65,12 @@ class ImageLoader {
 
 
 class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDelegateWaterfallLayout, NTTransitionProtocol, NTWaterFallViewControllerProtocol{
-//    class var sharedInstance: NSInteger = 0 Are u kidding me?
+    //    class var sharedInstance: NSInteger = 0 Are u kidding me?
     var imageNameList : Array <NSString> = []
     var azureImages: [UIImage] = []
+    var pullOffset = CGPointZero
     let delegateHolder = NavigationControllerDelegate()
+    private var numberOfItemsPerSection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,28 +78,20 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
         self.navigationController!.delegate = delegateHolder
         self.view.backgroundColor = UIColor.yellowColor()
         
-//        var index = 0
-//        while(index<14){
-//            let imageName = NSString(format: "%d.jpg", index)
-//            imageNameList.append(imageName)
-//            index++
-//        }
         let collection:UICollectionView = self.collectionView!;
         collection.frame = screenBounds
         collection.setCollectionViewLayout(CHTCollectionViewWaterfallLayout(), animated: false)
         collection.backgroundColor = UIColor.grayColor()
         collection.registerClass(NTWaterfallViewCell.self, forCellWithReuseIdentifier: waterfallViewCellIdentify)
         
-        invokeImageData(collection)
+        invokeImageData(collection,isReload: false)
         
-        
-
-
     }
     
-    func invokeImageData(collection:UICollectionView )
+    func invokeImageData(collection:UICollectionView, isReload: Bool )
     {
-        
+        //self.imageNameList = []
+        //self.azureImages = []
         
         let session = NSURLSession.sharedSession()
         
@@ -117,23 +111,55 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
                     for path in image
                     {
                         let trackName: String = self.getVaule(path as! NSDictionary, fieldName: "Path")!
-                        //print(trackName)
+                        
                         let aString = "https://recyclemeblob.blob.core.windows.net/images/"
                         let replaced = trackName.stringByReplacingOccurrencesOfString(aString, withString: "")
-                         print(replaced)
-                        self.imageNameList.append(replaced)
                         
-                        ImageLoader.sharedLoader.imageForUrl(trackName, completionHandler:{(image: UIImage?, url: String) in
-                           // self.myImage.image = image!
-                            self.azureImages.append(image!)
-                            if(self.azureImages.count == parentResult.count){
-                                        collection.reloadData()
+                        if(isReload){
+                            
+                            var found = false
+                            for img in self.imageNameList{
+                                
+                                if(img == replaced){
+                                    found = true
+                                }
+                                
                             }
-                        })
+                            if(!found){
+                                self.imageNameList.append(replaced)
+                                ImageLoader.sharedLoader.imageForUrl(trackName, completionHandler:{(image: UIImage?, url: String) in
+                                    
+                                    self.azureImages.append(image!)
+                                    //if(self.azureImages.count == (parentResult.count + 1)){
+                                    //    if(isReload){
+                                    
+                                    self.numberOfItemsPerSection += 1
+                                    //  }
+                                    print("count- + \(self.azureImages.count)")
+                                    collection.reloadData()
+                                    
+                                    //}
+                                })
+                            }
+                            
+                            
+                        }else{
+                            if(self.imageNameList.count < 6){
+                                self.imageNameList.append(replaced)
+                                ImageLoader.sharedLoader.imageForUrl(trackName, completionHandler:{(image: UIImage?, url: String) in
+                                    self.azureImages.append(image!)
+                                    if(self.azureImages.count == 6){
+                                        self.numberOfItemsPerSection += 6
+                                        collection.reloadData()
+                                        
+                                    }
+                                })
+                            }
+                        }
                     }
                 }
                 
-             
+                
                 
             }
             catch
@@ -162,21 +188,19 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
         
         let image:UIImage! = self.azureImages[indexPath.row] //UIImage(named: self.imageNameList[indexPath.row] as String)
         let imageHeight = image.size.height*gridWidth/image.size.width
-        print(imageHeight);
+        
         return CGSizeMake(gridWidth, imageHeight)
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let collectionCell: NTWaterfallViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(waterfallViewCellIdentify, forIndexPath: indexPath) as! NTWaterfallViewCell
         //collectionCell.imageName = self.imageNameList[indexPath.row] as String
-        collectionCell.azureImages = self.azureImages[indexPath.row] 
+        collectionCell.azureImages = self.azureImages[indexPath.row]
         collectionCell.setNeedsLayout()
         return collectionCell;
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return imageNameList.count;
-    }
+    
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         let pageViewController =
@@ -190,7 +214,7 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
     func pageViewControllerLayout () -> UICollectionViewFlowLayout {
         let flowLayout = UICollectionViewFlowLayout()
         let itemSize  = self.navigationController!.navigationBarHidden ?
-        CGSizeMake(screenWidth, screenHeight+20) : CGSizeMake(screenWidth, screenHeight-navigationHeaderAndStatusbarHeight)
+            CGSizeMake(screenWidth, screenHeight+20) : CGSizeMake(screenWidth, screenHeight-navigationHeaderAndStatusbarHeight)
         flowLayout.itemSize = itemSize
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
@@ -204,7 +228,7 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
         let image:UIImage! = self.azureImages[pageIndex]//UIImage(named: self.imageNameList[pageIndex] as String)
         let imageHeight = image.size.height*gridWidth/image.size.width
         if imageHeight > 400 {//whatever you like, it's the max value for height of image
-           position = .Top
+            position = .Top
         }
         let currentIndexPath = NSIndexPath(forRow: pageIndex, inSection: 0)
         let collectionView = self.collectionView!;
@@ -220,11 +244,42 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
         return collectionView
     }
     
+    func pageViewCellScrollViewContentOffset() -> CGPoint{
+        return self.pullOffset
+    }
+    
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        
+        let currentOffset = scrollView.contentOffset.y;
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height;
+        
+        
+        if (maximumOffset - currentOffset == 0.0) {
+            let collection:UICollectionView = self.collectionView!;
+            collection.frame = screenBounds
+            collection.setCollectionViewLayout(CHTCollectionViewWaterfallLayout(), animated: false)
+            collection.backgroundColor = UIColor.grayColor()
+            collection.registerClass(NTWaterfallViewCell.self, forCellWithReuseIdentifier: waterfallViewCellIdentify)
+            
+            self.invokeImageData(collection,isReload: true)
+            
+        }
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        print(numberOfItemsPerSection)
+        return numberOfItemsPerSection//self.imageNameList.count;
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
