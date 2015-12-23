@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-633.06666666666661" y="-168.50666666666666"/>
         </scene>
-        <!--Waterfall View Controller-->
+        <!--Think Recyle Me-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController storyboardIdentifier="waterfFall" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="NTWaterfallViewController" customModule="RecyleMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JFj-Ap-IKH"/>
+                    <navigationItem key="navigationItem" title="Think Recyle Me" id="JFj-Ap-IKH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="0c4-hU-IlF">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="logoutButton:" destination="vXZ-lx-hvc" id="cLb-8s-FSt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

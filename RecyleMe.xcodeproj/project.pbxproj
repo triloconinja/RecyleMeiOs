@@ -22,6 +22,7 @@
 		748DB9D11C2AB03B00B6D706 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748DB9CB1C2AB03B00B6D706 /* Pacifico.ttf */; };
 		748DB9D31C2AB03B00B6D706 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB9CE1C2AB03B00B6D706 /* SignUpViewController.swift */; };
 		748DB9D41C2AB03B00B6D706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB9CF1C2AB03B00B6D706 /* ViewController.swift */; };
+		748DB9D71C2AC0D600B6D706 /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB9D61C2AC0D600B6D706 /* Popover.swift */; };
 		74924DF01C2A700800C9FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74924DEF1C2A700800C9FD04 /* Settings.swift */; };
 		7494A8401C225E6900A68BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7494A83F1C225E6900A68BD2 /* AppDelegate.swift */; };
 		7494A8451C225E6900A68BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7494A8431C225E6900A68BD2 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		748DB9CB1C2AB03B00B6D706 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
 		748DB9CE1C2AB03B00B6D706 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		748DB9CF1C2AB03B00B6D706 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		748DB9D61C2AC0D600B6D706 /* Popover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
 		74924DEF1C2A700800C9FD04 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7494A83C1C225E6900A68BD2 /* RecyleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecyleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7494A83F1C225E6900A68BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		740EAF021C294C5300DFFFDE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				748DB9D61C2AC0D600B6D706 /* Popover.swift */,
 				740FFFD51C29496A0066CF2C /* Macro.swift */,
 			);
 			name = Utils;
@@ -339,6 +342,7 @@
 				740EAF081C294D5800DFFFDE /* NTTransition.swift in Sources */,
 				74924DF01C2A700800C9FD04 /* Settings.swift in Sources */,
 				7494A8481C225E6900A68BD2 /* RecyleMe.xcdatamodeld in Sources */,
+				748DB9D71C2AC0D600B6D706 /* Popover.swift in Sources */,
 				740FFFE21C29496A0066CF2C /* NTNavigationController.swift in Sources */,
 				740FFFE51C29496A0066CF2C /* NTWaterfallViewCell.swift in Sources */,
 				7494A8401C225E6900A68BD2 /* AppDelegate.swift in Sources */,

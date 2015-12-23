@@ -78,8 +78,16 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
         
         invokeImageData(collection,isReload: false)
         
+        
     }
     
+    @IBAction func logoutButton(sender: AnyObject) {
+        let startPoint = CGPoint(x: self.view.frame.width - 60, y: 55)
+        let aView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 180))
+        let popover = Popover()
+        popover.show(aView, point: startPoint)
+        PFUser.logOut()
+    }
     func invokeImageData(collection:UICollectionView, isReload: Bool )
     {
         
