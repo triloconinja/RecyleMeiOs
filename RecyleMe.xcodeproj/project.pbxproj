@@ -17,14 +17,22 @@
 		740FFFE21C29496A0066CF2C /* NTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FFFD81C29496A0066CF2C /* NTNavigationController.swift */; };
 		740FFFE51C29496A0066CF2C /* NTWaterfallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FFFDB1C29496A0066CF2C /* NTWaterfallViewCell.swift */; };
 		740FFFE61C29496A0066CF2C /* NTWaterfallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FFFDC1C29496A0066CF2C /* NTWaterfallViewController.swift */; };
+		7413C02F1C2AA3190088EA67 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7413C02E1C2AA3190088EA67 /* Podfile */; };
+		748DB9D01C2AB03B00B6D706 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB9CA1C2AB03B00B6D706 /* LoginViewController.swift */; };
+		748DB9D11C2AB03B00B6D706 /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748DB9CB1C2AB03B00B6D706 /* Pacifico.ttf */; };
+		748DB9D31C2AB03B00B6D706 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB9CE1C2AB03B00B6D706 /* SignUpViewController.swift */; };
+		748DB9D41C2AB03B00B6D706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB9CF1C2AB03B00B6D706 /* ViewController.swift */; };
+		74924DF01C2A700800C9FD04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74924DEF1C2A700800C9FD04 /* Settings.swift */; };
 		7494A8401C225E6900A68BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7494A83F1C225E6900A68BD2 /* AppDelegate.swift */; };
 		7494A8451C225E6900A68BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7494A8431C225E6900A68BD2 /* Main.storyboard */; };
 		7494A8481C225E6900A68BD2 /* RecyleMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7494A8461C225E6900A68BD2 /* RecyleMe.xcdatamodeld */; };
 		7494A84A1C225E6900A68BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7494A8491C225E6900A68BD2 /* Assets.xcassets */; };
 		7494A84D1C225E6900A68BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7494A84B1C225E6900A68BD2 /* LaunchScreen.storyboard */; };
+		C4D46C1CD185C08144BC95AC /* libPods-RecyleMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A76BA0072EC758B547A1C11D /* libPods-RecyleMe.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DA5A7C4D188D7EA90864BE0 /* Pods-RecyleMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecyleMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecyleMe/Pods-RecyleMe.release.xcconfig"; sourceTree = "<group>"; };
 		740EAF061C294D5800DFFFDE /* NTTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTTransition.swift; sourceTree = "<group>"; };
 		740EAF071C294D5800DFFFDE /* NTTransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTTransitionProtocol.swift; sourceTree = "<group>"; };
 		740FFFD31C29496A0066CF2C /* CHTCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHTCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
@@ -35,6 +43,13 @@
 		740FFFD81C29496A0066CF2C /* NTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTNavigationController.swift; sourceTree = "<group>"; };
 		740FFFDB1C29496A0066CF2C /* NTWaterfallViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTWaterfallViewCell.swift; sourceTree = "<group>"; };
 		740FFFDC1C29496A0066CF2C /* NTWaterfallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTWaterfallViewController.swift; sourceTree = "<group>"; };
+		7413C02E1C2AA3190088EA67 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		748DB9C61C2AAC6100B6D706 /* RecyleMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecyleMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		748DB9CA1C2AB03B00B6D706 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		748DB9CB1C2AB03B00B6D706 /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		748DB9CE1C2AB03B00B6D706 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		748DB9CF1C2AB03B00B6D706 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74924DEF1C2A700800C9FD04 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7494A83C1C225E6900A68BD2 /* RecyleMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecyleMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7494A83F1C225E6900A68BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7494A8441C225E6900A68BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +57,8 @@
 		7494A8491C225E6900A68BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7494A84C1C225E6900A68BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7494A84E1C225E6900A68BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A76BA0072EC758B547A1C11D /* libPods-RecyleMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecyleMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA0059222D1ED2912F52908E /* Pods-RecyleMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecyleMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecyleMe/Pods-RecyleMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +66,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D46C1CD185C08144BC95AC /* libPods-RecyleMe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DE842A5341B6D2278E4FE81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A76BA0072EC758B547A1C11D /* libPods-RecyleMe.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		740EAEFD1C294B8E00DFFFDE /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				740FFFD71C29496A0066CF2C /* NTHorizontalPageViewController.swift */,
+				748DB9CA1C2AB03B00B6D706 /* LoginViewController.swift */,
+				748DB9CE1C2AB03B00B6D706 /* SignUpViewController.swift */,
+				748DB9CF1C2AB03B00B6D706 /* ViewController.swift */,
 				740FFFD81C29496A0066CF2C /* NTNavigationController.swift */,
 				740FFFDC1C29496A0066CF2C /* NTWaterfallViewController.swift */,
 			);
@@ -115,11 +144,31 @@
 			name = Transitions;
 			sourceTree = "<group>";
 		};
+		748DB9D51C2AB04200B6D706 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				748DB9CB1C2AB03B00B6D706 /* Pacifico.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		74924DEE1C2A6FE900C9FD04 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				74924DEF1C2A700800C9FD04 /* Settings.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		7494A8331C225E6900A68BD2 = {
 			isa = PBXGroup;
 			children = (
+				7413C02E1C2AA3190088EA67 /* Podfile */,
 				7494A83E1C225E6900A68BD2 /* RecyleMe */,
 				7494A83D1C225E6900A68BD2 /* Products */,
+				9A07216762300DB749CE74E9 /* Pods */,
+				4DE842A5341B6D2278E4FE81 /* Frameworks */,
+				748DB9C61C2AAC6100B6D706 /* RecyleMe-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +183,8 @@
 		7494A83E1C225E6900A68BD2 /* RecyleMe */ = {
 			isa = PBXGroup;
 			children = (
+				748DB9D51C2AB04200B6D706 /* Font */,
+				74924DEE1C2A6FE900C9FD04 /* Core */,
 				740EAF051C294D2300DFFFDE /* Transitions */,
 				740EAF021C294C5300DFFFDE /* Utils */,
 				740EAF001C294C3B00DFFFDE /* Extensions */,
@@ -150,6 +201,15 @@
 			path = RecyleMe;
 			sourceTree = "<group>";
 		};
+		9A07216762300DB749CE74E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA0059222D1ED2912F52908E /* Pods-RecyleMe.debug.xcconfig */,
+				4DA5A7C4D188D7EA90864BE0 /* Pods-RecyleMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7494A8511C225E6900A68BD2 /* Build configuration list for PBXNativeTarget "RecyleMe" */;
 			buildPhases = (
+				3B8D8646C58519E233799F82 /* Check Pods Manifest.lock */,
 				7494A8381C225E6900A68BD2 /* Sources */,
 				7494A8391C225E6900A68BD2 /* Frameworks */,
 				7494A83A1C225E6900A68BD2 /* Resources */,
+				19D3058B9547596EB06ED25B /* Embed Pods Frameworks */,
+				E1C831681E1DBA92DE1833DC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +239,7 @@
 		7494A8341C225E6900A68BD2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Thinking Cap";
 				TargetAttributes = {
@@ -208,26 +272,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				7494A84D1C225E6900A68BD2 /* LaunchScreen.storyboard in Resources */,
+				748DB9D11C2AB03B00B6D706 /* Pacifico.ttf in Resources */,
 				7494A84A1C225E6900A68BD2 /* Assets.xcassets in Resources */,
+				7413C02F1C2AA3190088EA67 /* Podfile in Resources */,
 				7494A8451C225E6900A68BD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19D3058B9547596EB06ED25B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecyleMe/Pods-RecyleMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B8D8646C58519E233799F82 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E1C831681E1DBA92DE1833DC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecyleMe/Pods-RecyleMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7494A8381C225E6900A68BD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748DB9D01C2AB03B00B6D706 /* LoginViewController.swift in Sources */,
 				740FFFDE1C29496A0066CF2C /* Extension.swift in Sources */,
 				740EAF081C294D5800DFFFDE /* NTTransition.swift in Sources */,
+				74924DF01C2A700800C9FD04 /* Settings.swift in Sources */,
 				7494A8481C225E6900A68BD2 /* RecyleMe.xcdatamodeld in Sources */,
 				740FFFE21C29496A0066CF2C /* NTNavigationController.swift in Sources */,
 				740FFFE51C29496A0066CF2C /* NTWaterfallViewCell.swift in Sources */,
 				7494A8401C225E6900A68BD2 /* AppDelegate.swift in Sources */,
 				740FFFE61C29496A0066CF2C /* NTWaterfallViewController.swift in Sources */,
+				748DB9D41C2AB03B00B6D706 /* ViewController.swift in Sources */,
 				740FFFE01C29496A0066CF2C /* NTHorizontalPageViewCell.swift in Sources */,
+				748DB9D31C2AB03B00B6D706 /* SignUpViewController.swift in Sources */,
 				740EAF091C294D5800DFFFDE /* NTTransitionProtocol.swift in Sources */,
 				740FFFDF1C29496A0066CF2C /* Macro.swift in Sources */,
 				740FFFDD1C29496A0066CF2C /* CHTCollectionViewWaterfallLayout.swift in Sources */,
@@ -340,27 +458,34 @@
 		};
 		7494A8521C225E6900A68BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA0059222D1ED2912F52908E /* Pods-RecyleMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RecyleMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sg.com.maybank.bib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecyleMe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7494A8531C225E6900A68BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA5A7C4D188D7EA90864BE0 /* Pods-RecyleMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RecyleMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sg.com.maybank.bib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecyleMe-Bridging-Header.h";
 			};
 			name = Release;
 		};

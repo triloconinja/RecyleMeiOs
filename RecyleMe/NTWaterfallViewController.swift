@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  PinterestSwift
-//
-//  Created by Nicholas Tau on 6/30/14.
-//  Copyright (c) 2014 Nicholas Tau. All rights reserved.
-//
-
 import UIKit
 
 let waterfallViewCellIdentify = "waterfallViewCellIdentify"
@@ -65,7 +57,7 @@ class ImageLoader {
 
 
 class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDelegateWaterfallLayout, NTTransitionProtocol, NTWaterFallViewControllerProtocol{
-    //    class var sharedInstance: NSInteger = 0 Are u kidding me?
+    
     var imageNameList : Array <NSString> = []
     var azureImages: [UIImage] = []
     var pullOffset = CGPointZero
@@ -90,12 +82,11 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
     
     func invokeImageData(collection:UICollectionView, isReload: Bool )
     {
-        //self.imageNameList = []
-        //self.azureImages = []
+        
         
         let session = NSURLSession.sharedSession()
         
-        let url = NSURL(string: "http://recyclemeapi.azurewebsites.net/odata/Item/?$filter=IsDeleted%20eq%20false%20and%20Status%20ne%201&$orderby=ModifiedDate%20desc&$expand=ItemImages,Owner,ItemCommented,ItemCommented/Commenter,ItemUserFollowers")!
+        let url = NSURL(string: Settings.latestImagesURL as String)!
         
         let dataTask = session.dataTaskWithURL(url) { (data,response, error) -> Void in
             
@@ -112,7 +103,7 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
                     {
                         let trackName: String = self.getVaule(path as! NSDictionary, fieldName: "Path")!
                         
-                        let aString = "https://recyclemeblob.blob.core.windows.net/images/"
+                        let aString = Settings.blobImageUrl
                         let replaced = trackName.stringByReplacingOccurrencesOfString(aString, withString: "")
                         
                         if(isReload){
@@ -130,26 +121,23 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
                                 ImageLoader.sharedLoader.imageForUrl(trackName, completionHandler:{(image: UIImage?, url: String) in
                                     
                                     self.azureImages.append(image!)
-                                    //if(self.azureImages.count == (parentResult.count + 1)){
-                                    //    if(isReload){
-                                    
                                     self.numberOfItemsPerSection += 1
-                                    //  }
-                                    print("count- + \(self.azureImages.count)")
+                                    
                                     collection.reloadData()
                                     
-                                    //}
+                                    
                                 })
                             }
                             
                             
                         }else{
-                            if(self.imageNameList.count < 6){
+                            
+                            if(self.imageNameList.count < Settings.itemPerCollectionView){
                                 self.imageNameList.append(replaced)
                                 ImageLoader.sharedLoader.imageForUrl(trackName, completionHandler:{(image: UIImage?, url: String) in
                                     self.azureImages.append(image!)
-                                    if(self.azureImages.count == 6){
-                                        self.numberOfItemsPerSection += 6
+                                    if(self.azureImages.count == Settings.itemPerCollectionView){
+                                        self.numberOfItemsPerSection += Settings.itemPerCollectionView
                                         collection.reloadData()
                                         
                                     }
@@ -269,7 +257,7 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        print(numberOfItemsPerSection)
+        
         return numberOfItemsPerSection//self.imageNameList.count;
     }
     

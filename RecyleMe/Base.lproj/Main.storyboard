@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xQ3-r2-YoC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eJT-Vh-Tk7">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -40,5 +40,37 @@
             </objects>
             <point key="canvasLocation" x="-168" y="-169"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="05w-uf-rDo">
+            <objects>
+                <viewController title="Welcome View Controller" id="eJT-Vh-Tk7" customClass="ViewController" customModule="RecyleMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oct-yE-CRr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZxB-Ha-0Ag"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RU5-Ep-xtB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_bg" translatesAutoresizingMaskIntoConstraints="NO" id="laN-cN-MkI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="laN-cN-MkI" secondAttribute="bottom" id="9Xn-BW-6JE"/>
+                            <constraint firstAttribute="trailing" secondItem="laN-cN-MkI" secondAttribute="trailing" id="Y82-3N-VEf"/>
+                            <constraint firstItem="laN-cN-MkI" firstAttribute="top" secondItem="RU5-Ep-xtB" secondAttribute="top" id="dTA-P1-9Gm"/>
+                            <constraint firstItem="laN-cN-MkI" firstAttribute="leading" secondItem="RU5-Ep-xtB" secondAttribute="leading" id="uoo-xL-6bE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMP-vh-W31" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-169"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="welcome_bg" width="4000" height="2667"/>
+    </resources>
 </document>
