@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Parse.setApplicationId("f56IthRYVdHRS9OsCRqWeWtlmfzDHFs8ZJcGPL1L", clientKey:"M0yMtMBIF5i8tSFPviMZFmyekhZ0ssAiNPVJE4mw")
-        PFTwitterUtils.initializeWithConsumerKey("", consumerSecret:"")
+        Parse.setApplicationId(Settings.parseAppId, clientKey:Settings.parseClientKey)
+        PFTwitterUtils.initializeWithConsumerKey(Settings.twitterConsumerKey, consumerSecret:Settings.twitterConsumerSecret)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions);
         return true
     }
