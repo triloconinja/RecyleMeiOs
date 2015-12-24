@@ -12,9 +12,9 @@ class Settings {
     
     static let itemPerCollectionView = 6
     static let blobImageUrl = "https://recyclemeblob.blob.core.windows.net/images/"
-    
-    static let parseAppId = "f56IthRYVdHRS9OsCRqWeWtlmfzDHFs8ZJcGPL1L"
-    static let parseClientKey = "M0yMtMBIF5i8tSFPviMZFmyekhZ0ssAiNPVJE4mw"
+                            
+    static let parseAppId = "lSGDQL3a7UZQj1BL5v2bUvSqNaS8fy9N8HL36exp"
+    static let parseClientKey = "IhpEe0gnXL6ZUl8oNaqG4CiYkKX2gXxsg3aPStZi"
     
     static let twitterConsumerKey = ""
     static let twitterConsumerSecret = ""
