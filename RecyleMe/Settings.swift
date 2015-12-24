@@ -21,5 +21,8 @@ class Settings {
     
     
     static let latestImagesURL = "http://recyclemeapi.azurewebsites.net/odata/Item/?$filter=IsDeleted%20eq%20false%20and%20Status%20ne%201&$orderby=ModifiedDate%20desc&$expand=ItemImages,Owner,ItemCommented,ItemCommented/Commenter,ItemUserFollowers"
+    
+    static let api:String = "http://recyclemeapi.azurewebsites.net/odata/"
+    
 }
 
